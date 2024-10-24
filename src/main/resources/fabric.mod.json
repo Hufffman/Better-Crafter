@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "better_crafter",
+	"version": "${version}",
+	"name": "Better Crafter",
+	"description": "This is an Better Crafter's description!",
+	"authors": [
+		"Huffman"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/better_crafter/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.huffman.BetterCrafter"
+		],
+		"client": [
+			"com.huffman.BetterCrafterClient"
+		]
+	},
+	"mixins": [
+		"better_crafter.mixins.json",
+		{
+			"config": "better_crafter.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
